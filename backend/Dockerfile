@@ -3,7 +3,6 @@ FROM openjdk:17-alpine as builder
 ADD . /builder
 WORKDIR /builder
 RUN ./gradlew build
-RUN ls /builder/build/libs/
 
 # Run
 FROM openjdk:17-alpine
